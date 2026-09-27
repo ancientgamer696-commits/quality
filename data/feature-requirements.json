@@ -1,0 +1,13 @@
+{
+  "recorded_date": "2026-09-27",
+  "requested_brand": "Quality Glass Emporium",
+  "customer_collections_requested": ["Anime inspired", "Religious gods and sacred art", "Fancy", "Landscapes", "Premium", "Products and gifts"],
+  "marketing_sections_requested": ["Featured products", "Today's deals (real approved offers only)"],
+  "customer_journey_requested": ["Browse collection", "Choose frame(s)", "Confirm shipping and approved total", "Manual UPI payment", "Enter UTR", "Upload payment screenshot privately", "Final confirmation button opening WhatsApp draft"],
+  "quantity_rule_clarification": "One frame may proceed; two or more frames must contact the shop for a combined final quote before paying. A WhatsApp handoff is available after the proof stage for any quantity.",
+  "payment_safety_constraints": ["UPI payee/QR must be verified by the owner", "UTR or screenshot does not prove merchant receipt", "Only a staff member verifying bank/UPI statement can mark paid", "WhatsApp deep link can prefill text but cannot attach screenshot or send message automatically", "Order needs persistent server-generated reference even if customer closes WhatsApp"],
+  "manager_modules": ["Owner/staff authentication and RBAC", "Orders", "Manual payment review", "Production stages", "Catalog and price rules", "Inventory", "Shipping", "Featured/deal scheduling", "Reports and audit"],
+  "selected_stack_plan": ["Cloudflare Pages: customer site and manager site", "Cloudflare Worker: API", "Cloudflare D1: structured data", "Private Cloudflare R2: original photos and payment proof", "Optional ImageKit: derivative public images", "Google Sign-In: optional after secure guest checkout", "WhatsApp wa.me: communication", "Delhivery: shipping after onboarding"],
+  "source_context": "Owner conversation and project research; this file is a planning requirement, not an assertion that implementation or integrations are complete.",
+  "production_status": "Not launched; customer and manager HTML are standalone prototypes; no real payment or order storage."
+}

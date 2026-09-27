@@ -1,0 +1,22 @@
+{
+  "observed_date": "2026-09-27",
+  "identity": {
+    "requested_brand_display_name": "Quality Glass Emporium",
+    "public_listing_name": "Quality Glass Emporium And Photo Framing Center",
+    "address": "Belliganj Malik Mau Road, Near Hotel Ganesh, PNT Colony, Raebareli, Uttar Pradesh 229001, India",
+    "phone_whatsapp_from_existing_site": "+91 83031 08051",
+    "opening_hours_from_existing_site": "Daily 10:00 AM–9:00 PM; not independently confirmed current",
+    "justdial_rating_at_review": "4.9 / 5, 8 ratings (public snapshot; not independently authenticated)",
+    "shop_hours_owner_confirmed": false,
+    "phone_current_owner_confirmed": false,
+    "merchant_upi_verified": false,
+    "upi_id_or_qr": null,
+    "google_short_link_resolved": false
+  },
+  "source_urls": [
+    "https://quality-glass-website.vercel.app/",
+    "https://quality-glass-website.vercel.app/contact",
+    "https://www.justdial.com/Raebareli/Quality-Glass-Emporium-And-Photo-Framing-Center-Near-Hotel-Ganesh-Pnt-Colony/9999PX535-X535-210223144545-F6P5_BZDET"
+  ],
+  "notes": "Business facts are public listings or owner-supplied branding; do not import old-site product prices, testimonials or sale claims as verified current inventory. Short Google share URL was not retrievable."
+}

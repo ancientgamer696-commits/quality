@@ -17,6 +17,7 @@ The demos are standalone HTML files. Open/download them in a browser. **They do 
 - [Platform integration sequence](research/quality-glass-platform-connection-steps.md)
 - [Cloudflare platform starter and setup instructions](platform/README.md)
 - [Original placeholder artworks](assets/) — illustrative assets, not confirmed shop inventory.
+- [Structured extracted data](data/README.md) — old-site category/product snapshots, cited competitor observations, provider limits, shop profile and feature requirements. **Not** an approved product import.
 
 No API tokens, R2 keys, customer payment proof, or private data should ever be committed to this public repository.
 

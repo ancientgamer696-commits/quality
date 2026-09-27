@@ -1,0 +1,11 @@
+observed_date,service,free_or_planning_limit,official_source,important_caveat
+2026-09-27,Cloudflare Pages,"500 builds/month; 100 projects/account; 20000 files/site on Free",https://developers.cloudflare.com/pages/platform/limits/,Static delivery differs from Worker request limits
+2026-09-27,Cloudflare Workers,"100000 requests/day; 10 ms CPU/invocation Free",https://developers.cloudflare.com/workers/platform/limits/,Free plan limit can return an error when exhausted
+2026-09-27,Cloudflare D1,"5 million rows read/day; 100000 rows written/day; 5 GB aggregate on Free",https://developers.cloudflare.com/d1/platform/pricing/,Rows are not queries
+2026-09-27,Cloudflare D1,"500 MB per database Free; 10 free databases",https://developers.cloudflare.com/d1/platform/limits/,Keep binary photos and proofs outside D1
+2026-09-27,Cloudflare R2,"10 GB-month Standard; 1M Class A and 10M Class B/month; egress free",https://developers.cloudflare.com/r2/pricing/,Enable subscription/billing setup; do not share S3 credentials
+2026-09-27,Backblaze B2,"First 10 GB storage free; free egress up to 3x monthly average storage",https://www.backblaze.com/cloud-storage/pricing,B2 via Cloudflare partner route differs from B2 via unrelated transform service
+2026-09-27,ImageKit,"20 GB/month bandwidth; 3 GB fixed DAM storage",https://imagekit.io/plans/,Not unlimited transformations or bandwidth
+2026-09-27,Oracle Cloud Always Free,"A1 equivalence 2 OCPUs and 12 GB memory; 200 GB block volumes",https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm,Idle VM reclamation and regional capacity risk; not primary launch stack
+2026-09-27,Google Maps Embed API,"No-charge embed requests",https://developers.google.com/maps/documentation/embed/quickstart,API key and billing account required
+2026-09-27,Delhivery,"Shipment creation; pincode serviceability; tracking; labels via business APIs",https://help.delhivery.com/docs/client-developer-portal-1,Shipping is per-shipment and needs business onboarding
