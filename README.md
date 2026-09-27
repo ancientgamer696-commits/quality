@@ -19,3 +19,5 @@ The demos are standalone HTML files. Open/download them in a browser. **They do 
 - [Original placeholder artworks](assets/) — illustrative assets, not confirmed shop inventory.
 
 No API tokens, R2 keys, customer payment proof, or private data should ever be committed to this public repository.
+
+> GitHub Actions workflow is at [`.github/workflows/deploy-pages-preview.yml`](.github/workflows/deploy-pages-preview.yml), adapted for this repository layout. It requires new GitHub Actions secrets and is manual-only. Do not reuse any credentials pasted in chat.
