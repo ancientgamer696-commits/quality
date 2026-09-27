@@ -1,0 +1,25 @@
+{
+  "name": "quality-glass-platform",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Two Cloudflare Pages preview sites and a read-only Cloudflare Worker API foundation.",
+  "scripts": {
+    "build:shop": "python3 scripts/build.py shop",
+    "build:manager": "python3 scripts/build.py manager",
+    "build": "npm run build:shop && npm run build:manager",
+    "dev:api": "node_modules/node/bin/node node_modules/wrangler/bin/wrangler.js dev --config apps/api/wrangler.jsonc --local --ip 0.0.0.0 --port 8787",
+    "deploy:shop": "npm run build:shop && node_modules/node/bin/node node_modules/wrangler/bin/wrangler.js pages deploy apps/shop/dist --project-name=quality-glass-shop",
+    "deploy:manager": "npm run build:manager && node_modules/node/bin/node node_modules/wrangler/bin/wrangler.js pages deploy apps/manager/dist --project-name=quality-glass-manager-preview",
+    "deploy:api": "node_modules/node/bin/node node_modules/wrangler/bin/wrangler.js deploy --config apps/api/wrangler.jsonc",
+    "db:migrate:local": "node_modules/node/bin/node node_modules/wrangler/bin/wrangler.js d1 migrations apply quality-glass-data-dev --local --config apps/api/wrangler.jsonc",
+    "test": "node --test apps/api/test/*.test.mjs && python3 scripts/smoke_build.py"
+  },
+  "devDependencies": {
+    "node": "22.23.3",
+    "wrangler": "4.141.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

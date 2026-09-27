@@ -1,0 +1,56 @@
+name: Deploy safe Quality Glass Pages previews
+
+# Run manually while account, products, and checkout are not production-ready.
+# Never paste Cloudflare credentials in repository files or workflow inputs.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview-shop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build public shop preview with checkout disabled
+        run: python3 scripts/build.py shop
+      - name: Verify safe build
+        run: |
+          grep -q 'Checkout unavailable in public preview' apps/shop/dist/index.html
+          grep -q 'No live payments or uploads' apps/shop/dist/index.html
+      - name: Deploy public preview to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_PAGES_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy apps/shop/dist --project-name=quality-glass-shop
+
+  preview-manager:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build public manager DEMO (not an authenticated admin)
+        run: python3 scripts/build.py manager
+      - name: Verify noindex marker and fictional-record banner
+        run: |
+          grep -q 'noindex, nofollow' apps/manager/dist/_headers
+          grep -q 'These are fictional sample orders' apps/manager/dist/index.html
+      - name: Deploy public manager demo to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_PAGES_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy apps/manager/dist --project-name=quality-glass-manager-preview

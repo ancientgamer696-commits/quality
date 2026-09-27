@@ -1,0 +1,1 @@
+{"name":"quality-glass-shop","private":true,"version":"0.1.0","scripts":{"build":"python3 ../../scripts/build.py shop"}}

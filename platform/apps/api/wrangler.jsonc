@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "quality-glass-api-dev",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-09-27",
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "vars": {
+    "DEPLOYMENT_STAGE": "development",
+    "ALLOWED_ORIGINS": ""
+  }
+  // IMPORTANT: A D1 binding is deliberately not present yet. Step 2 of SETUP.md
+  // walks the owner through creating a *development* D1 database in their
+  // Cloudflare account, then adding its actual ID as binding DB.
+}
