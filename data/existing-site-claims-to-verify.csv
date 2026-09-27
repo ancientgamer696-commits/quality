@@ -1,0 +1,8 @@
+claim,old_site_value,page,verification_note,source_url,observed_date
+Justdial rating shown on old site,4.9 / 5,home,Public listing snapshot; verify count and date on Justdial.,https://quality-glass-website.vercel.app/,2026-09-27
+Order tracking without login,Order number + phone number,track,Depends on real backend; not implemented.,https://quality-glass-website.vercel.app/track,2026-09-27
+Delivery area,anywhere in Raebareli,home/services,"Distance, charges and timeline unverified.",https://quality-glass-website.vercel.app/home/services,2026-09-27
+Same-day delivery mentioned in a testimonial,same day,home,Customer-generated text; needs owner confirmation if reused.,https://quality-glass-website.vercel.app/,2026-09-27
+No hidden charges,"frame, glass, mount and finishing included",services,Owner must confirm what each price includes.,https://quality-glass-website.vercel.app/services,2026-09-27
+Unlimited free photo upload,studio uploader,studio,Storage/retention policy undefined.,https://quality-glass-website.vercel.app/studio,2026-09-27
+10 to 200 piece bulk pricing,special bulk pricing on WhatsApp,bulk,No published bulk rate card; quote manually.,https://quality-glass-website.vercel.app/bulk,2026-09-27
