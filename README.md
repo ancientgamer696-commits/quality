@@ -18,6 +18,8 @@ The demos are standalone HTML files. Open/download them in a browser. **They do 
 - [Cloudflare platform starter and setup instructions](platform/README.md)
 - [Original placeholder artworks](assets/) — illustrative assets, not confirmed shop inventory.
 - [Structured extracted data](data/README.md) — all 51 old-site pages archived as text plus product, category, service, size, FAQ and journey tables; cited competitor page and policy extracts; provider limits; shop profile; feature requirements. **Not** an approved product import.
+- [Everything extracted, in one file](data/ALL-EXTRACTED-DATA.md) — every table plus the archived text of all 51 old-site pages in a single Markdown document.
+- [Conversation record](conversation/chat-log.md) — the whole project conversation, decisions, prototype status and security notes in one file.
 
 No API tokens, R2 keys, customer payment proof, or private data should ever be committed to this public repository.
 

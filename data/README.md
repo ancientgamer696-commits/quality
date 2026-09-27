@@ -37,9 +37,11 @@ No competitor images, artwork, page copies or customer reviews were archived. Sn
 | `feature-requirements.json` | Requested collections, marketing sections, payment/proof workflow, manager modules and the selected free-tier stack. Requirements, not shipped features. |
 | `platform-limits.csv` | Free-tier arithmetic with official documentation URLs and caveats. |
 
+| `ALL-EXTRACTED-DATA.md` | Single-file bundle: every table above plus the verbatim text of all 51 archived pages. Rebuild with `build_single_file_bundle.py`. |
+
 ## Rebuild scripts
 
-`extract_public_data.py` (old-site cards and categories), `extract_owner_site_pages.py` (crawls the old site's sitemap, skipping robots.txt-disallowed paths), `extract_owner_structured.py` (no network; parses the archived text), `extract_competitor_pages.py` (structured competitor facts only). Run them only when you deliberately want to refresh this research.
+`extract_public_data.py` (old-site cards and categories), `extract_owner_site_pages.py` (crawls the old site's sitemap, skipping robots.txt-disallowed paths), `extract_owner_structured.py` (no network; parses the archived text), `extract_competitor_pages.py` (structured competitor facts only), `build_single_file_bundle.py` (regenerates the single-file bundle). Run them only when you deliberately want to refresh this research.
 
 **Not included:** competitor images, scraped reviews, protected pages, guessed WhatsApp/UPI credentials, any API tokens, bank details or customer payment evidence. A verified merchant UPI ID/QR was never found or supplied, so none is recorded here.
 
