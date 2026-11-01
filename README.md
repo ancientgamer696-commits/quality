@@ -25,3 +25,8 @@ The demos are standalone HTML files. Open/download them in a browser. **They do 
 No API tokens, R2 keys, customer payment proof, or private data should ever be committed to this public repository.
 
 > GitHub Actions workflow is at [`.github/workflows/deploy-pages-preview.yml`](.github/workflows/deploy-pages-preview.yml), adapted for this repository layout. It requires new GitHub Actions secrets and is manual-only. Do not reuse any credentials pasted in chat.
+
+## Live
+- Shop (auto-updates): https://ancientgamer696-commits.github.io/quality/
+- Official domain: https://quality-glass.pages.dev/ (update via `platform/quality-glass-shop-pages-upload.zip` → CF Pages dashboard)
+- WhatsApp/Facebook/X link previews: see `platform/docs/whatsapp-link-previews.md`

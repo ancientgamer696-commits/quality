@@ -16,3 +16,20 @@ After deploying, warm/verify the crawlers:
 2. Send the link to yourself on WhatsApp — expect title + image + description.
 
 Stale previews on your phone = WhatsApp's CDN cache; re-scrape + resend, or append `?v=2`.
+
+## Live copies
+
+| Domain | What it serves | How updated |
+|---|---|---|
+| `https://ancientgamer696-commits.github.io/quality/` | full OG build (github.io-baked URLs) | `git push` to `gh-pages` branch (see below) |
+| `https://quality-glass.pages.dev/` | official domain — needs one zip upload | upload `platform/quality-glass-shop-pages-upload.zip` in CF Pages dashboard |
+
+Re-render branded cards after catalog edits: `python3 scripts/make_og_cards.py` (needs Pillow +
+repo fonts). Then rebuild + push both:
+```
+python3 scripts/build.py shop                     # pages.dev variant -> repo zip
+QGE_ORIGIN=https://ancientgamer696-commits.github.io/quality python3 scripts/build.py shop
+# copy apps/shop/dist/* into a clone of the gh-pages branch and push
+```
+Product share links: `…/share/sacred-lotus/`, categories `…/share/c-religious/` — each card shows
+that item's own 1200×630 art with name + price, tap-through to the shop.
