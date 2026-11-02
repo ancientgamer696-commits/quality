@@ -168,6 +168,36 @@ if app.name == "shop":
     print(f"OG: {len(arts)} art, {n_prod} product + {n_cat} category share pages, "
           f"{len(list(ogdir.glob('*.jpg')))} images")
 
+if app.name == "manager":
+    # Manager is an internal console; the OG set just makes a shared login URL look
+    # like the brand instead of a blank card (page itself stays noindex).
+    msite = os.environ.get("QGE_MGR_ORIGIN", SITE).rstrip("/")
+    mblock = ""
+    cov_src = app / "src" / "og-cover.jpg"
+    if cov_src.exists():
+        (output / "og-cover.jpg").write_bytes(cov_src.read_bytes())
+        cov = f"{msite}/og-cover.jpg"
+        mblock = (
+            '<meta property="og:site_name" content="Quality Glass Emporium">'
+            '<meta property="og:type" content="website">'
+            '<meta property="og:title" content="Quality Glass Emporium — Manager">'
+            '<meta property="og:description" content="Internal stock, orders and pricing console. Staff only.">'
+            f'<meta property="og:image" content="{cov}">'
+            '<meta name="twitter:card" content="summary_large_image">'
+            f'<meta name="twitter:image" content="{cov}">'
+        )
+    ic = ""
+    for icon in ("icon.png", "apple-touch-icon.png"):
+        f = app / "src" / icon
+        if f.exists():
+            (output / icon).write_bytes(f.read_bytes())
+    if (output / "icon.png").exists():
+        ic = (f'<link rel="icon" type="image/png" href="{msite}/icon.png">'
+              f'<link rel="apple-touch-icon" href="{msite}/apple-touch-icon.png">')
+    if mblock or ic:
+        content = re.sub(r"(<title>.*?</title>)", lambda m: m.group(1) + mblock + ic, content, count=1, flags=re.S)
+        print("manager: og block + icons injected")
+
 (output / "index.html").write_text(content)
 (output / "_headers").write_text(
     "/*\n"

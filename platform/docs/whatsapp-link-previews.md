@@ -33,3 +33,6 @@ QGE_ORIGIN=https://ancientgamer696-commits.github.io/quality python3 scripts/bui
 ```
 Product share links: `…/share/sacred-lotus/`, categories `…/share/c-religious/` — each card shows
 that item's own 1200×630 art with name + price, tap-through to the shop.
+
+Manager app: run `python3 scripts/build.py manager` — OG brand card + icons are injected there too.
+If the manager lives on its own domain, build with `QGE_MGR_ORIGIN=https://that-domain`.
