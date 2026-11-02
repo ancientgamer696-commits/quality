@@ -30,7 +30,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_PAGES_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy platform/apps/shop/dist --project-name=quality-glass-shop
+          command: pages deploy platform/apps/shop/dist --project-name=quality-glass
 
   preview-manager:
     runs-on: ubuntu-latest
@@ -53,4 +53,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_PAGES_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy platform/apps/manager/dist --project-name=quality-glass-manager-preview
+          command: pages deploy platform/apps/manager/dist --project-name=qge-manager
